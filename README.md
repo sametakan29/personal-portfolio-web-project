@@ -1,4 +1,4 @@
-# Personal Portfolio Website
+# Personal Portfolio Website(This is my first project :D)
 
 A personal portfolio and about page for Samet Akan, a computer engineering student.
 
