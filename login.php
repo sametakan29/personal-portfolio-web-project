@@ -5,7 +5,7 @@ $dogruSifre = "b";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") 
 {
-    // 2. Form verilerini al
+    //Form verilerini al
     if (isset($_POST['username'])) 
     {$kullaniciAdi = $_POST['username'];} 
     else {$kullaniciAdi = '';}
@@ -15,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
     else 
     {$sifre = '';}
 
-    // 6. Kullanıcı adı ve şifreyi karşılaştır
+    //Kullanıcı adı ve şifreyi karşılaştır
     if ($kullaniciAdi === $dogruKullanici && $sifre === $dogruSifre) {
         // Başarılı giriş
         echo "Hoşgeldiniz " . htmlspecialchars($kullaniciAdi);
