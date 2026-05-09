@@ -1,182 +1,96 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="tr-TR">
+
 <head>
-    <title>İletişim</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
-    <link rel="stylesheet" href="Css/css/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <title>İletişim</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
 </head>
+
 <body>
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-  <div class="container-fluid d-flex">
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" href="hakkimda.html">Hakkımda</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="cv.html">Özgeçmiş</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="sehrim.html">Şehrim</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="mirasimiz.html">Mirasım</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="ilgi_alanlarim.html">İlgi Al.</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link active" href="iletisim.html">İletişim</a>
-      </li>
-    </ul>
-          <ul class="navbar-nav ms-auto">
-      <li class="nav-item">
-        <a class="nav-link" href="login.html">Giriş Yap</a>
-      </li>
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <div class="container-fluid d-flex">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="hakkimda.html">Hakkımda</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="cv.html">Özgeçmiş</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="sehrim.html">Şehrim</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="mirasimiz.html">Mirasım</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="ilgi_alanlarim.html">İlgi Al.</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="iletisim.html">İletişim</a>
+        </li>
       </ul>
-  </div>
-</nav>
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="login.html">Giriş Yap</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
 
-<!-- FORM -->
-<form class="container" id="contactForm">
-  <div class="mb-3">
-  <label class="form-label">Ad: <input class="form-control" type="text" name="name"></label>
-  <label class="form-label">Soyad: <input class="form-control" type="text" name="surname"></label>
-  <label class="form-label">E-posta: <input class="form-control" type="text" name="email"></label>
-  <label class="form-label">Telefon: <input class="form-control" type="text" name="phone"></label>
-  <label class="form-label">Konu:
-    <select class="form-control" name="subject">
-      <option value="">--Seçiniz--</option>
-      <option value="soru">Soru</option>
-      <option value="destek">Destek</option>
-      <option value="geriBildirim">Geri Bildirim</option>
-    </select>
-  </label>
+  <!-- FORM -->
+  <form class="container" id="contactForm">
+    <div class="mb-3">
+      <label class="form-label">Ad: <input class="form-control" type="text" name="name"></label>
+      <label class="form-label">Soyad: <input class="form-control" type="text" name="surname"></label>
+      <label class="form-label">E-posta: <input class="form-control" type="text" name="email"></label>
+      <label class="form-label">Telefon: <input class="form-control" type="text" name="phone"></label>
+      <label class="form-label">Konu:
+        <select class="form-control" name="subject">
+          <option value="">--Seçiniz--</option>
+          <option value="soru">Soru</option>
+          <option value="destek">Destek</option>
+          <option value="geriBildirim">Geri Bildirim</option>
+        </select>
+      </label>
 
-  <label class="form-label d-block">Cinsiyet:</label>
-  
-  <div class="form-check">
-    <input class="form-check-input" type="radio" name="gender" id="erkek" value="erkek">
-    <label class="form-check-label" for="erkek">Erkek</label>
-  </div>
-  
-  <div class="form-check">
-    <input class="form-check-input" type="radio" name="gender" id="kadin" value="kadın">
-    <label class="form-check-label" for="kadin">Kadın</label>
-  </div>
+      <label class="form-label d-block">Cinsiyet:</label>
 
-  <p>İlgi Alanları:
-    <input type="checkbox" name="interests" value="kodlama"> Kodlama
-    <input type="checkbox" name="interests" value="müzik"> Müzik
-  </p>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="gender" id="erkek" value="erkek">
+        <label class="form-check-label" for="erkek">Erkek</label>
+      </div>
 
-  <label>Mesaj:
-    <textarea name="message"></textarea>
-  </label><br><br>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="gender" id="kadin" value="kadın">
+        <label class="form-check-label" for="kadin">Kadın</label>
+      </div>
 
-<button type="submit">Gönder(Vanilla js kontrolü)</button>
-<button type="reset" class="btn btn-secondary">Temizle</button>
-<p id="error" class="error"></p>
-<button type="button" @click="validateForm">Gönder(Vue js Kontrolü)</button>
+      <p>İlgi Alanları:
+        <input type="checkbox" name="interests" value="kodlama"> Kodlama
+        <input type="checkbox" name="interests" value="müzik"> Müzik
+      </p>
 
-  </div>
-</form>
+      <label>Mesaj:
+        <textarea name="message"></textarea>
+      </label><br><br>
 
-<script>
-  document.getElementById("contactForm").addEventListener("submit", function (e) {
-    e.preventDefault();
+      <button type="submit">Gönder(Vanilla js kontrolü)</button>
+      <button type="reset" class="btn btn-secondary">Temizle</button>
+      <p id="error" class="error"></p>
+      <button type="button" @click="validateForm">Gönder(Vue js Kontrolü)</button>
 
-    const form = this;
-    const formData = new FormData(form);
-    const data = {};5
-    const error = document.getElementById("error");
+    </div>
+  </form>
 
-    // Kontrol
-    const requiredFields = ["name", "surname", "email", "phone", "subject", "message"];
-    let hasError = false;
-
-    for (let field of requiredFields) {
-      if (!formData.get(field)?.trim()) {
-        hasError = true;
-      }
-    }
-
-    if (!formData.get("gender")) hasError = true;
-    if (!formData.getAll("interests").length) hasError = true;
-
-    const email = formData.get("email");
-    const phone = formData.get("phone");
-
-    if (!/^[^ ]+@[^ ]+\.[a-z]{2,3}$/.test(email)) {
-      error.innerText = "Geçerli bir e-posta giriniz.";
-      return;
-    }
-
-    if (!/^[0-9]+$/.test(phone)) {
-      error.innerText = "Telefon numarası sadece rakam içermelidir.";
-      return;
-    }
-
-    if (hasError) {
-      error.innerText = "Lütfen tüm alanları doldurun.";
-      return;
-    }
-
-    // Hata yoksa verileri kaydet
-    formData.forEach((value, key) => {
-      // Birden fazla interest varsa dizi yap
-      if (data[key]) {
-        if (Array.isArray(data[key])) {
-          data[key].push(value);
-        } else {
-          data[key] = [data[key], value];
-        }
-      } else {
-        data[key] = value;
-      }
-    });
-
-    localStorage.setItem("formData", JSON.stringify(data));
-    window.location.href = "sonuc.html";
-  });
-  
-</script>
-<script>
-  const { createApp } = Vue;
-
-  createApp({
-    methods: {
-      validateForm() {
-        const name = document.querySelector('input[name="name"]').value.trim();
-        const surname = document.querySelector('input[name="surname"]').value.trim();
-        const email = document.querySelector('input[name="email"]').value.trim();
-        const phone = document.querySelector('input[name="phone"]').value.trim();
-        const subject = document.querySelector('select[name="subject"]').value;
-        const gender = document.querySelector('input[name="gender"]:checked');
-        const message = document.querySelector('textarea[name="message"]').value.trim();
-        const interests = document.querySelectorAll('input[name="interests"]:checked');
-
-        let errorMsg = "";
-
-        if (!name || !surname || !email || !phone || !subject || !gender || !message || interests.length === 0) {
-          errorMsg = "Lütfen tüm alanları doldurun.";
-        } else if (!/^[^ ]+@[^ ]+\.[a-z]{2,3}$/.test(email)) {
-          errorMsg = "Geçerli bir e-posta giriniz.";
-        } else if (!/^[0-9]+$/.test(phone)) {
-          errorMsg = "Telefon numarası sadece rakam içermelidir.";
-        }
-
-        document.getElementById("error").innerText = errorMsg || "Form başarıyla kontrol edildi (Vue.js).";
-      }
-    }
-  }).mount("#contactForm");
-</script>
-
+  <script src="js/contact.js"></script>
 
 </body>
+
 </html>
